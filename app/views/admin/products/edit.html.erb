@@ -7,8 +7,9 @@
 <%= f.input :price %>
 <%= f.input :quantity %>
 <% if @product.image.present? %>
-<span>目前商品图</span><br>
-<%= image_tag(@product.image,thumb.url) %>
+<span>目前商品图</span> <br>
+<%= image_tag(@product.image.thumb.url) %>
+
 <% end %>
 <%= f.input :image, as: :file %>
 
