@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :carts
+  resources :carts do
+    collection do
+      delete :clean
+    end
+  end
   root 'welcome#index'
   namespace :admin do
     resources :products
