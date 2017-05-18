@@ -6,9 +6,14 @@ Rails.application.routes.draw do
     end
   end
   resources :cart_items
-  root 'welcome#index'
+  root 'products#index'
   namespace :admin do
-    resources :products
+    resources :products do
+      member do
+        post :move_up
+        post :move_down
+      end
+    end
   end
   resources :products do
     member do
