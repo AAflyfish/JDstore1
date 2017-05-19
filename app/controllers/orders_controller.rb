@@ -1,4 +1,10 @@
 class OrdersController < ApplicationController
+
+  def show
+    @order = Order.find(params[:id])
+    @product_lists = @order.product_lists
+  end
+  
   def create
     @order = Order.new(order_params)
     @order.user = current_user
