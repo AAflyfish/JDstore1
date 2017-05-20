@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :cart_items
   root 'products#index'
   namespace :admin do
+    resources :orders
     resources :products do
       member do
         post :move_up
