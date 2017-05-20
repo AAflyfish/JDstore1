@@ -21,4 +21,35 @@ class Order < ApplicationRecord
     self.update_columns(is_paid: true)  #付款完成与付款方式记录的method
   end
 
+
+  include AASM   #设定订单状态机制
+  aasm do
+    state :order_placed, initial: true
+    state :paid
+    state :shipping
+    state :shipped
+    state :order_cancelled
+    state :good_returned
+
+    event :make_payment, after_commit: :pay! do
+      transitions from: :order_placed, to: :paid
+    end
+
+    event :ship do
+      transitions from: :paid,         to: :shpping
+    end
+
+    event :deliver do
+      transitions from: :shipping,      to: :shipped
+    end
+
+    event :retrun_good do
+      transitions from: :shipped,       to: :good_returned
+    end
+
+    event :cancel_order do
+      transitions from: [:order_placed, :paid], to: :order_cancelled
+    end
+    end
+
 end
