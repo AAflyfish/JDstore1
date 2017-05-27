@@ -1,3 +1,133 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// <!-- end of banner-v2 -->
+.banner-v2 {
+    margin-top: 60px;
+    height: 480px;
+    .banner-img {
+        height: 480px;
+        position: relative;
+        z-index: 1;
+    }
+    .banner-img img {
+    width: 100%;
+    opacity: 0.7;
+    height: 100%;
+}
+ .banner-detail {
+    margin-top: -480px;
+    padding-top: 0px;
+    height: 460px;
+    position: relative;
+    z-index: 10;
+}
+.banner-detail .banner-slogan {
+    position: relative;
+    color: #fff;
+    margin-top: 120px;
+    margin-left: 30%;
+    font-weight: 400;
+    width: 400px;
+}
+.banner-detail .sub-slogan {
+    margin-top: 40px;
+    padding-right: 40px;
+    font-size: 50px;
+}
+.banner-detail .sign-up-button {
+    margin-left: 30%;
+    position: absolute;
+    height: 80px;
+    margin-top: 30px;
+    width: 100%;
+}
+.banner-v2 .banner-detail .btn-default {
+    background: #e6b254;
+    color: #fff;
+    height: 50px;
+    width: 150px;
+    padding-top: 7px;
+    font-size: 24px;
+    border: 1px solid #fff;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+}
+// <!-- end of banner-v2 -->
+
+// <-- our service and -->
+#service {
+    padding-bottom: 50px;
+    background-color: #fff;
+    padding-top: 20px;
+
+    .module-name {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 0;
+}
+.module-name.decorative span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+}
+.col-md-4 {
+    padding: 15px 10px;
+}
+.text-center {
+    text-align: center;
+}
+.fd-avatar-box {
+    border: 4px solid #faf6ec;
+    border-radius: 168px;
+    width: 83px;
+    height: 83px;
+    background-color: #fff;
+    position: relative;
+    z-index: 14;
+    margin: 0 auto;
+}
+.fd-avatar-box .fd-avatar-box-color-overlay {
+    position: absolute;
+    background-color: none;
+    border-radius: 167px;
+    height: 83px;
+    width: 83px;
+}
+}
+
+#call-to-action{
+.call-to-action {
+    display: block;
+    background: linear-gradient(rgba(12,12,9,0.4), rgba(12,12,9,0.4)),url(https://ws2.sinaimg.cn/large/006tNbRwgy1ffwjz2i9hhj30q10i2go7.jpg);
+    background-position: center 80%;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    width: 100%;
+    min-width: 960px;
+    height: 200px;
+    position: relative;
+}
+.call-to-action .bottom-content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    height: 200px;
+    position: relative;
+    text-align: center;
+    padding-top: 40px;
+}
+}
