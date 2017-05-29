@@ -60,9 +60,12 @@
 							<span class="color blue"></span>
 						</h5>
 						<div class="action">
-
-              <a class="btn btn-default" href="/carts"><i class="fa fa-hand-o-right">add to cart</i></a>
-							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+              <% if @product.quantity.present? && @product.quantity > 0 %>
+              <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
+              <% else %>
+              已销售一空，无法购买
+              <% end %>
+              <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 					</div>
 				</div>
