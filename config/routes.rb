@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :cart_items
-  root 'products#index'
+  root 'welcome#index'
   namespace :admin do
     resources :orders do
       member do
