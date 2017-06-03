@@ -20,7 +20,7 @@ class Order < ApplicationRecord
   def pay!
     self.update_columns(is_paid: true)  #付款完成与付款方式记录的method
   end
-
+scope :recent, -> { order("id DESC")}  #使用scope代替order 详情见：rails101 6-4章节
 
   include AASM
 

@@ -1,4 +1,4 @@
-<h2> 订单列表 </h2>
+<h2 class="text-center"> 订单列表 </h2>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -6,6 +6,7 @@
       <th>生成时间</th>
       <th>订购者</th>
       <th>订单状态</th>
+      <th>选项</th>
     </tr>
   </thead>
   <tbody>
@@ -21,3 +22,8 @@
 
   </tbody>
   <table>
+
+    <!--增加分页-->
+    <div class="text-center">
+          <%= will_paginate @order %>
+        </div>

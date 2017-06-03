@@ -40,7 +40,11 @@ gem 'aasm'
 gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
 gem 'figaro'
+<<<<<<< HEAD
 gem 'rails-erd'
+=======
+gem 'will_paginate'
+>>>>>>> admin
 
 gem 'letter_opener', group: :development
 group :development, :test do
