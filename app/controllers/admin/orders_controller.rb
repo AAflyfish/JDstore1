@@ -39,4 +39,10 @@ class Admin::OrdersController < ApplicationController
     redirect_to :back
   end
 
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+    redirect_to admin_orders_path
+  end
+
 end
