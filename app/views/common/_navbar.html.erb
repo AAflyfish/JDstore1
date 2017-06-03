@@ -2,40 +2,40 @@
   <div class="container-fluid">
 
     <div class="navbar-header">
-      <a class="navbar-brand" href="/"> <font color="blue">Big Show </font></a>
+      <a class="navbar-brand" href="/"> <font color="#47B2E2">Big Show </font></a>    <!--  修改导航栏颜色-->
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active">
-          <%= link_to("Products", products_path) %>
+          <%= link_to("Products", products_path,{:style=>'color:#FFFFFF', :class => "css_class"}) %>  <!-- 修改products字体颜色 -->
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
           <%= link_to carts_path do %>
-          购物车 <i class="fa fa-shopping-cart" > </i> ( <%= current_cart.products.count %> )
+         <font color="#FFFFFF">  购物车 <i class="fa fa-shopping-cart" style="color:#D32735" > </i> ( <%= current_cart.products.count %> ) </font> <!-- 通过内链改变图标颜色  -->
           <% end %>
         </li>
         <% if !current_user %>
-                  <li><%= link_to("注册", new_user_registration_path) %> </li>
-                  <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
+                  <li><%= link_to("注册", new_user_registration_path,{:style=>'color:#FFFFFF', :class => "css_class"}) %> </li>
+                  <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path,{:style=>'color:#FFFFFF', :class => "css_class"}) %></li>
                 <% else %>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Hi!, <%= current_user.email %>
+                      <font color="#FFFFFF">  Hi!, <%= current_user.email %> </font>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
                       <% if current_user.admin? %>
                       <li>
-                        <%= link_to("Admin 选单", admin_products_path ) %>
+                        <%= link_to(content_tag(:i, ' Admin 选单', class: 'fa fa-user'), admin_products_path ) %>
                       </li>
                       <% end %>
                       <li>
-                        <%= link_to("个人订单列表", account_orders_path ) %>
+                        <%= link_to(content_tag(:i, "个人订单列表", class: "fa fa-list-ul"), account_orders_path ) %>
                       </li>
-                        <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
+                        <li> <%= link_to(content_tag(:i, '安全登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
                     </ul>
                   </li>
                 <% end %>
