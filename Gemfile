@@ -41,18 +41,10 @@ gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
 gem 'figaro'
 <<<<<<< HEAD
-<<<<<<< HEAD
 gem 'rails-erd'
 =======
 gem 'will_paginate'
 >>>>>>> admin
-=======
-
-gem 'will_paginate'
-
-gem 'rails-erd'
-
->>>>>>> 82c6141c8597e0e207ef034df1bd648c00c924d2
 
 gem 'letter_opener', group: :development
 group :development, :test do
