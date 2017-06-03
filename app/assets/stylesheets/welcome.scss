@@ -108,28 +108,43 @@
 }
 }
 
-#call-to-action{
-.call-to-action {
-    display: block;
-    background: linear-gradient(rgba(12,12,9,0.4), rgba(12,12,9,0.4)),url(https://ws2.sinaimg.cn/large/006tNbRwgy1ffwjz2i9hhj30q10i2go7.jpg);
-    background-position: center 80%;
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-    width: 100%;
-    min-width: 960px;
-    height: 200px;
-    position: relative;
-}
-.call-to-action .bottom-content {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 700px;
-    height: 200px;
-    position: relative;
+
+.push-box {
     text-align: center;
-    padding-top: 40px;
+    padding: 75px 0 0 0;
+    height: 200px;
+    background: url(https://ws2.sinaimg.cn/large/006tNbRwgy1ffwjz2i9hhj30q10i2go7.jpg) no-repeat scroll top center/cover;
+
+ .btn-push {
+    background-color: #18bc9c;
+    color: #e74c3c;
+    border-color: #b94135;
+    padding: 10px 20px;
+    font-size: 20px;
 }
 }
+// #call-to-action{
+// .call-to-action {
+//     display: block;
+//     background: linear-gradient(rgba(12,12,9,0.4), rgba(12,12,9,0.4)),url(https://ws1.sinaimg.cn/large/006tNc79gy1fg4vyalqa9j30xc0kodif.jpg);
+//     background-position: center 80%;
+//     background-size: cover;
+//     margin-left: auto;
+//     margin-right: auto;
+//     margin-bottom: 0;
+//     width: 100%;
+//     min-width: 960px;
+//     height: 200px;
+//     position: relative;
+// }
+// .call-to-action .bottom-content {
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//     max-width: 700px;
+//     height: 200px;
+//     position: relative;
+//     text-align: center;
+//     padding-top: 40px;
+// }
+// }
