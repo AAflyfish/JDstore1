@@ -18,6 +18,7 @@
 @import "font-awesome";
 
 
+
 //navbar导航栏开始
  .navbar-default {
      background-color: #212121;  //背景颜色
@@ -36,12 +37,14 @@
   .navbar-default .navbar-brand {
     color: #9E9E9E; //字体颜色
 
+
     padding: 10px 15px; //上下10px，左右15px
     line-height: 30px; //文字行高
   }
 
   .navbar-default .navbar-brand:hover,
   .navbar-default .navbar-brand:focus {
+
     color: white; //鼠标放置在链接上的文字颜色
 
     background-color: transparent; //鼠标放置在链接上的背景颜色，这里设为透明
@@ -75,3 +78,4 @@
 
    }
    // 导航栏结束
+
