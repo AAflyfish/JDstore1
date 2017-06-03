@@ -40,6 +40,7 @@ gem 'aasm'
 gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
 gem 'figaro'
+gem 'rails-erd'
 
 gem 'letter_opener', group: :development
 group :development, :test do
