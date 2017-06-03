@@ -5,7 +5,7 @@ class Admin::OrdersController < ApplicationController
   before_action :admin_required
 
   def index
-    @orders = Order.order("id DESC")
+    @orders = Order.recent.paginate(:page => params[:page], :per_page => 5)   # 增加大于5分页
   end
 
   def show

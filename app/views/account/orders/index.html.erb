@@ -1,4 +1,4 @@
-<h2>订单列表</h2>
+<h2 class="text-center">订单列表</h2>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -11,10 +11,15 @@
 
     <% @orders.each do |order| %>
     <tr>
-      
+
       <td> <%= link_to(order.id, order_path(order.token)) %> </td>
       <td> <%= order.created_at.to_s(:long) %> </td>
     </tr>
     <% end %>
   </tbody>
 </table>
+
+<!--增加分页-->
+<div class="text-center">
+      <%= will_paginate @order %>
+    </div>
