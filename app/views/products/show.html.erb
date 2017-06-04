@@ -80,7 +80,20 @@
 </div>
 <> -->
 
-<div class="row">
+
+<div class="header_placeholder h80"></div>
+<div class="header">
+  <div class="w1200 clearfix bc mt30 pb20 header_content pr">
+    <div class="logo fl"> <%=link_to("Big Show", products_path, {:style=>'color:#47B2E2',class: "col-red"} )%></div>
+  </div>
+</div>
+
+<div class="detail mt20 w1200 bc pb50">
+  <p class="location col-gray"><%= link_to("首页", products_path)%> >
+  <%= @product.title %></p>
+</div>
+
+ <div class="row">
   <div class="col-md-6">
     <% if @product.image.present? %>
       <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
@@ -101,4 +114,4 @@
       <%= link_to("加入购物车", "#", :class => "btn btn-danger btn-lg") %>
     </div>
   </div>
-</div>
+</div>  
