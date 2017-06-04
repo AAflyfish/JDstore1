@@ -93,7 +93,106 @@
   <%= @product.title %></p>
 </div>
 
- <div class="row">
+<div class="col-md-6">
+  <% if @product.image.present? %>
+    <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+  <% else %>
+    <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+  <% end %>
+  <ul class="preview-thumbnail nav nav-tabs">
+    <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="https://ww1.sinaimg.cn/large/006tNbRwgy1fg87xp3sudj30om0ok467.jpg"  width="50" height="50" ></a></li>
+    <li><a data-target="#pic-2" data-toggle="tab"><img src="https://ww1.sinaimg.cn/large/006tNbRwgy1fg87ypbvuvj30oo0ok1a9.jpg"  width="50" height="50"></a></li>
+    <li><a data-target="#pic-3" data-toggle="tab"><img src="https://ww2.sinaimg.cn/large/006tNbRwgy1fg87b7b95lj30o80oigt2.jpg"  width="50" height="50"></a></li>
+    <li><a data-target="#pic-4" data-toggle="tab"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fg9fadwsdlj30s40s4k3c.jpg"  width="50" height="50"></a></li>
+    <li><a data-target="#pic-5" data-toggle="tab"><img src="https://ww2.sinaimg.cn/large/006tNc79ly1fg9fdef0zuj31cq14owxn.jpg"  width="50" height="50"></a></li>
+  </ul>
+</div>
+
+<div class="magnifier-preview border" id="preview"></div>
+      <% if @photos.present? %>
+        <a class="magnifier-thumb-wrapper" href="javascript:;">
+          <img
+            id="thumb"
+            src="<%= @photos.first.avatar.medium.url %>"
+            data-large-img-wrapper="preview"
+            data-large-img-url="<%= @photos.first.avatar.medium.url %>">
+        </a>
+
+      <% end %>
+  </div>
+  <ul class="intro-preview clearfix">
+       <% if @photos.present? %>
+         <% @photos.each_with_index do |p, index| %>
+           <% if index == 0 %>
+             <li class="border intro-preview-item intro-preview-activeItem fl">
+           <% else %>
+             <li class="border intro-preview-item fl">
+           <% end %>
+           <% if index < 5 %>
+             <%= image_tag p.avatar.medium.url %>
+           <% end %>
+           </li>
+         <% end %>
+       <% end %>
+     </ul>
+
+<div class="magnifier-preview border" id="preview"></div>
+        <% if @photos.present? %>
+          <a class="magnifier-thumb-wrapper" href="javascript:;">
+            <img
+              id="thumb"
+              src="<%= @photos.first.avatar.medium.url %>"
+              data-large-img-wrapper="preview"
+              data-large-img-url="<%= @photos.first.avatar.medium.url %>">
+          </a>
+        <% end %>
+        <ul class="intro-preview clearfix">
+          <% if @photos.present? %>
+            <% @photos.each_with_index do |p, index| %>
+              <% if index == 0 %>
+                <li class="border intro-preview-item intro-preview-activeItem fl">
+              <% else %>
+                <li class="border intro-preview-item fl">
+              <% end %>
+              <% if index < 5 %>
+                <%= image_tag p.avatar.medium.url %>
+              <% end %>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+
+    <div class="intro-text fr">
+      <h3 class="f20 ell fb"><%= @product.title %></h3>
+      <p class="intro-text-desc"><%= @product.description %></p>
+      <p class="intro-text-value bg-gray">
+        <span class="pl20 pr30">售价</span><span class="price f24 fb col-red">￥<%= @product.price %></span>
+      </p>
+      <p class="intro-text-service">
+        <span class="pl20 pr30">运费</span><span>满99元包邮 | 正品保证</span>
+      </p>
+      <p class="intro-text-count">
+      <span class="pl20 pr30">库存</span><span id="quantity"><%= @product.quantity %></span>
+      </p>
+      <div class="intro-text-quantity clearfix">
+        <span class="pl20 pr30 fl">数量</span>
+        <div class="countNumber fl mt10">
+
+
+
+        </div>
+      </div>
+      <p class="intro-text-btnWrap">
+      </p>
+    </div>
+    <div class="pull-left">
+      <%= link_to("加入购物车", "#", :class => "btn btn-danger btn-lg") %>
+    </div>
+
+
+
+
+<!-- <div class="row">
   <div class="col-md-6">
     <% if @product.image.present? %>
       <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
@@ -114,4 +213,4 @@
       <%= link_to("加入购物车", "#", :class => "btn btn-danger btn-lg") %>
     </div>
   </div>
-</div>  
+</div>    -->
