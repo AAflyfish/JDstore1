@@ -97,7 +97,7 @@
   <% if @product.image.present? %>
     <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
   <% else %>
-    <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+    <%= image_tag("http://placehold.it/400x400&text=No Pic" , class: "thumbnail") %>
   <% end %>
   <ul class="preview-thumbnail nav nav-tabs">
     <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="https://ww1.sinaimg.cn/large/006tNbRwgy1fg87xp3sudj30om0ok467.jpg"  width="50" height="50" ></a></li>
