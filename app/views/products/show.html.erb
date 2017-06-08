@@ -81,7 +81,7 @@
 <> -->
 
 
-<div class="header_placeholder h80"></div>
+<!-- <div class="header_placeholder h80"></div>
 <div class="header">
   <div class="w1200 clearfix bc mt30 pb20 header_content pr">
     <div class="logo fl"> <%=link_to("Big Show", products_path, {:style=>'color:#47B2E2',class: "col-red"} )%></div>
@@ -114,4 +114,107 @@
       <%= link_to("加入购物车", "#", :class => "btn btn-danger btn-lg") %>
     </div>
   </div>
-</div>  
+</div>   -->
+
+
+<!--===== 商品资讯 =====-->
+   <!--=== 页面左侧：产品图片 ===-->
+   <section class="col-xs-12 col-md-8 product-image-box">
+     <div class="row">
+       <!-- 显示产品图片 - 大图 -->
+       <div class="col-md-6">
+         <% if @product.image.present? %>
+         <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+         <% else %>
+         <%= image_tag("http://placehold.it/800x800&text=No Pic", class: "thumbnail") %>
+         <% end %>
+       </div>
+       <!-- <div class="col-md-12 main-image">
+         <%= image_tag("product_show_01.jpg") %>
+       </div> -->
+       <!-- 显示产品图片 - 其他小图 -->
+       <!-- <div class="col-xs-6 col-sm-3 col-md-4 other-image">
+         <%= image_tag("product_show_02.jpg") %>
+       </div>
+       <div class="col-xs-6 col-sm-3 col-md-4 other-image">
+         <%= image_tag("product_show_03.jpg") %>
+       </div>
+       <div class="col-xs-6 col-sm-3 col-md-4 other-image">
+         <%= image_tag("product_show_04.jpg") %>
+       </div> -->
+     </div>
+   </section>
+
+   <!--=== 页面右侧：产品主要资讯及功能 ===-->
+   <section class="col-xs-12 col-md-4 product-main-box">
+
+     <!-- 产品标题 -->
+
+
+     <!-- 产品價錢 -->
+     <h2> <%= @product.title %></h2>
+     <div style="height:100px,">
+
+       <p>
+         <%= @product.description %>
+       </p>
+       <div class="price-service">
+
+
+      </div>
+       <p class="price">售价
+         <span>￥<%= @product.price %></span>
+       </p>
+<p class="service">服务 <span class="service-detail">7天无忧退货 | 48小时快速退款 | 正品保证</span></p>
+     </div>
+
+
+
+     <!-- 收藏 / 社群分享 -->
+     <div class="row">
+       <!-- 收藏 -->
+       <div class="favorite">
+         <a href="#"><i class="fa fa-plus"></i>加入收藏</a>
+       </div>
+
+       <!-- 社群分享 -->
+       <!-- <div class="share">
+         <a href="#"><i class="fa fa-twitter"></i></a>
+         <a href="#"><i class="fa fa-facebook"></i></a>
+         <a href="#"><i class="fa fa-google"></i></a>
+         <a href="#"><i class="fa fa-pinterest"></i></a>
+         <a href="#"><i class="fa fa-wechat"></i></a>
+       </div> -->
+     </div>
+
+     <!-- 购买按钮 -->
+     <div class="purchase">
+       <button class="btn btn-lg btn-default">
+         <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
+       </button>
+     </div>
+
+     <!-- 推荐商品 * 3 -->
+     <div class="recommend">
+
+       <hr class="recommend-title">
+      <h5>推荐商品<h5>
+       <div class="col-xs-12 col-sm-4 col-md-4">
+         <%= link_to '/products/2' do %>
+           <%= image_tag("https://ws2.sinaimg.cn/large/006tNbRwgy1fgdz7uisrfj306a04lgnn.jpg") %>
+         <% end %>
+       </div>
+       <div class="col-xs-12 col-sm-4 col-md-4">
+         <%= link_to '/products/6' do %>
+           <%= image_tag("https://ws2.sinaimg.cn/large/006tNbRwgy1fgdz93dzwhj307904mdhk.jpg") %>
+         <% end %>
+       </div>
+       <div class="col-xs-12 col-sm-4 col-md-4">
+         <%= link_to '/products/5' do %>
+           <%= image_tag("https://ws1.sinaimg.cn/large/006tNbRwgy1fgdz7iguq7j30cy04owh3.jpg") %>
+         <% end %>
+       </div>
+     </div>
+   </section>
+ </div>
+</div>
