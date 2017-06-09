@@ -1,329 +1,101 @@
-<!-- <!商品展示页>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>eCommerce Product Detail</title>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-	<div class="container">
-		<div class="card">
-			<div class="container-fliud">
-				<div class="wrapper row">
-					<div class="preview col-md-6">
-
-						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div>
-						</div>
-						<ul class="preview-thumbnail nav nav-tabs">
-						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-2" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-3" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						</ul>
-
-					</div>
-					<div class="details col-md-6">
-						 <h2> <%= @product.title %></h2>
-						<div class="rating">
-							<div class="stars">
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							</div>
-							<span class="review-no">41 reviews</span>
-						</div>
-            <div style="height:100px,">
-      <p>
-        <%= @product.description %>
-      </p>
-    </div>
-    <div> 数量 : <%= @product.quantity %> </div>
-    <div class="product-price"> ￥ <%= @product.price %> </div>
-    <div class="pull-right">
-
-						<div class="action">
-              <% if @product.quantity.present? && @product.quantity > 0 %>
-              <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
-              <% else %>
-              已销售一空，无法购买
-              <% end %>
-              <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-  </body>
-</html> -->
-
-<!-- ------------------------------------- -->
-<!-- <div class="row">
-  <div class="col-md-6">
-    <% if @product.image.present? %>
-      <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
-    <% else %>
-      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-    <% end %>
-  </div>
-  <div class="col-md-6">
-    <h2> <%= @product.title %> </h2>
-    <div style="height:100px;">
-      <p>
-        <%= @product.description %>
-      </p>
-    </div>
-    <div> 数量 : <%= @product.quantity %> </div>
-    <div class="product-price"> ￥ <%= @product.price %> </div>
-    <div class="pull-right">
-      <%= link_to("加入购物车", "#", :class => "btn btn-danger btn-lg") %>
-    </div>
-  </div>
-</div>    -->
-
-
-<!-- <div class="header_placeholder h80"></div>
-<div class="header">
-  <div class="w1200 clearfix bc mt30 pb20 header_content pr">
-    <div class="logo fl"> <%=link_to("Big Show", products_path, class: "col-red")%></div>
-  </div>
-</div>
-<> -->
-
-<!-- ------------------------------- -->
-
-
-<!-- 这段是代码是把小图片写死的代码 ，这是开头 -->
-<!-- <div class="header_placeholder h80"></div>
-<div class="header">
-  <div class="w1200 clearfix bc mt30 pb20 header_content pr">
-    <div class="logo fl"> <%=link_to("Big Show", products_path, {:style=>'color:#47B2E2',class: "col-red"} )%></div>
-  </div>
-</div>
-
-<div class="detail mt20 w1200 bc pb50">
-  <p class="location col-gray"><%= link_to("首页", products_path)%> >
-  <%= @product.title %></p>
-</div>
-
-<div class="col-md-6">
-  <% if @product.image.present? %>
-    <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
-  <% else %>
-    <%= image_tag("http://placehold.it/400x400&text=No Pic" , class: "thumbnail") %>
-  <% end %>
-  <ul class="preview-thumbnail nav nav-tabs">
-    <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="https://ww1.sinaimg.cn/large/006tNbRwgy1fg87xp3sudj30om0ok467.jpg"  width="50" height="50" ></a></li>
-    <li><a data-target="#pic-2" data-toggle="tab"><img src="https://ww1.sinaimg.cn/large/006tNbRwgy1fg87ypbvuvj30oo0ok1a9.jpg"  width="50" height="50"></a></li>
-    <li><a data-target="#pic-3" data-toggle="tab"><img src="https://ww2.sinaimg.cn/large/006tNbRwgy1fg87b7b95lj30o80oigt2.jpg"  width="50" height="50"></a></li>
-    <li><a data-target="#pic-4" data-toggle="tab"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fg9fadwsdlj30s40s4k3c.jpg"  width="50" height="50"></a></li>
-    <li><a data-target="#pic-5" data-toggle="tab"><img src="https://ww2.sinaimg.cn/large/006tNc79ly1fg9fdef0zuj31cq14owxn.jpg"  width="50" height="50"></a></li>
-  </ul>
-</div>
-
-<div class="magnifier-preview border" id="preview"></div>
-      <% if @photos.present? %>
-        <a class="magnifier-thumb-wrapper" href="javascript:;">
-          <img
-            id="thumb"
-            src="<%= @photos.first.avatar.medium.url %>"
-            data-large-img-wrapper="preview"
-            data-large-img-url="<%= @photos.first.avatar.medium.url %>">
-        </a>
-
-      <% end %>
-  </div>
-  <ul class="intro-preview clearfix">
-       <% if @photos.present? %>
-         <% @photos.each_with_index do |p, index| %>
-           <% if index == 0 %>
-             <li class="border intro-preview-item intro-preview-activeItem fl">
-           <% else %>
-             <li class="border intro-preview-item fl">
-           <% end %>
-           <% if index < 5 %>
-             <%= image_tag p.avatar.medium.url %>
-           <% end %>
-           </li>
+<!--===== 商品资讯 =====-->
+   <!--=== 页面左侧：产品图片 ===-->
+   <section class="col-xs-12 col-md-8 product-image-box">
+     <div class="row">
+       <!-- 显示产品图片 - 大图 -->
+       <div class="col-md-6">
+         <% if @product.image.present? %>
+         <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+         <% else %>
+         <%= image_tag("http://placehold.it/800x800&text=No Pic", class: "thumbnail") %>
          <% end %>
-       <% end %>
-     </ul>
+       </div>
+       <!-- <div class="col-md-12 main-image">
+         <%= image_tag("product_show_01.jpg") %>
+       </div> -->
+       <!-- 显示产品图片 - 其他小图 -->
+       <!-- <div class="col-xs-6 col-sm-3 col-md-4 other-image">
+         <%= image_tag("product_show_02.jpg") %>
+       </div>
+       <div class="col-xs-6 col-sm-3 col-md-4 other-image">
+         <%= image_tag("product_show_03.jpg") %>
+       </div>
+       <div class="col-xs-6 col-sm-3 col-md-4 other-image">
+         <%= image_tag("product_show_04.jpg") %>
+       </div> -->
+     </div>
+   </section>
 
-<div class="magnifier-preview border" id="preview"></div>
-        <% if @photos.present? %>
-          <a class="magnifier-thumb-wrapper" href="javascript:;">
-            <img
-              id="thumb"
-              src="<%= @photos.first.avatar.medium.url %>"
-              data-large-img-wrapper="preview"
-              data-large-img-url="<%= @photos.first.avatar.medium.url %>">
-          </a>
-        <% end %>
-        <ul class="intro-preview clearfix">
-          <% if @photos.present? %>
-            <% @photos.each_with_index do |p, index| %>
-              <% if index == 0 %>
-                <li class="border intro-preview-item intro-preview-activeItem fl">
-              <% else %>
-                <li class="border intro-preview-item fl">
-              <% end %>
-              <% if index < 5 %>
-                <%= image_tag p.avatar.medium.url %>
-              <% end %>
-              </li>
-            <% end %>
-          <% end %>
-        </ul>
+   <!--=== 页面右侧：产品主要资讯及功能 ===-->
+   <section class="col-xs-12 col-md-4 product-main-box">
 
-    <div class="intro-text fr">
-      <h3 class="f20 ell fb"><%= @product.title %></h3>
-      <p class="intro-text-desc"><%= @product.description %></p>
-      <p class="intro-text-value bg-gray">
-        <span class="pl20 pr30">售价</span><span class="price f24 fb col-red">￥<%= @product.price %></span>
-      </p>
-      <p class="intro-text-service">
-        <span class="pl20 pr30">运费</span><span>满99元包邮 | 正品保证</span>
-      </p>
-      <p class="intro-text-count">
-      <span class="pl20 pr30">库存</span><span id="quantity"><%= @product.quantity %></span>
-      </p>
-      <div class="intro-text-quantity clearfix">
-        <span class="pl20 pr30 fl">数量</span>
-        <div class="countNumber fl mt10">
+     <!-- 产品标题 -->
 
 
+     <!-- 产品價錢 -->
+     <h2> <%= @product.title %></h2>
+     <div style="height:100px,">
 
-        </div>
+       <p>
+         <%= @product.description %>
+       </p>
+       <div class="price-service">
+
+
       </div>
-      <p class="intro-text-btnWrap">
-      </p>
-    </div>
-    <div class="pull-left">
-      <%= link_to("加入购物车", "#", :class => "btn btn-danger btn-lg") %>
-    </div> -->
-<!-- 这段是代码是把小图片写死的代码 ，这是结尾 -->
+       <p class="price">售价
+         <span>￥<%= @product.price %></span>
+       </p>
+<p class="service">服务 <span class="service-detail">7天无忧退货 | 48小时快速退款 | 正品保证</span></p>
+     </div>
 
 
 
-<!-- 商品圖片 -->
-        <div class='col-xs-12 col-md-8 product-image'>
-          <div class='row'>
-            <% if @product_images.present? %>
-            <!-- 顯示第一張商品圖片 - main 尺寸大圖 -->
-            <div class='col-md-12'>
-              <% if @product.is_chosen %>
-                <div class="chosen-box location"><%= t('product-chosen') %></div>
-              <% end %>
-              <%= image_tag(@product_images.first.image.main.url, class: 'main-image thumbnail') %>
-            </div>
-              <% @product_images.each_with_index do |p| %>
-                <!-- 顯示所有商品圖片 - other 尺寸小圖 -->
-                <div class='col-md-2 col-sm-4 col-xs-6 image-box'>
-                  <%= image_tag(p.image.other.url, class: 'list-image thumbnail') %>
-                </div>
-              <% end %>
-            <% else %>
-              <%= image_tag('http://placehold.it/400x400&text=No Pic', class: 'thumbnail') %>
-            <% end %>
-          </div>
-        </div>
-        <!--=== 商品資訊 ===-->
-        <%= form_tag add_to_cart_product_path(@product), :method => :post, :remote => true do %>
-        <div class='col-xs-12 col-md-4 product-detail'>
-          <div>
-            <h1><%= @product.name %></h1>
-            <div class="price">
-              <div class="left-box">
-                <h3><%= render_product_price(@product) %></h3>
-              </div>
-              <div class="right-box currency">
-                <!-- 幣值轉換 -->
-                <%= render 'products/currency' %>
-              </div>
-            </div>
-            <p><%= simple_format(@product.description) %></p>
-          </div>
-          <hr />
-          <div>
-            <p><%= t('product-brand') %>：<%= link_to(@product.brand.name, products_path(:brand => @product.brand.name)) %></p>
-            <!-- 商品規格：尺寸 / 材質 / 產地 / 顏色 -->
-            <%= render 'products/specification' %>
-            <br/>
-            <p>
-              <!--=== 如果庫存數量大於零 ===-->
-              <% if @orderSum < @product.quantity && @product.quantity > 0 %>
-              <div class="quantity-box">
-                <div class="left-box"><%= t('product-quantity') %>：</div>
-                <div class="left-box quantity-button">
-                  <%= link_to("-", "", id: "quantity-down", class: "quantity-actions") %>
-                  <input type="text" name="quantity" value="1" id="quantity" max="<%= @product.quantity - @orderSum %>" class="quantity-input">
-                  <%= link_to("+", "", id: "quantity-up", class: "quantity-actions") %>
-                </div>
-                <% if @product_stock <= 10 %>
-                <span class="quantity-stock">(库存数量：<%= @product_stock %>)</span>
-                <% end %>
-              </div>
+     <!-- 收藏 / 社群分享 -->
+     <div class="row">
+       <!-- 收藏 -->
+       <!-- <div class="favorite">
+         <a href="#"><i class="fa fa-plus"></i>加入收藏</a>
+       </div> -->
 
-              <!--=== 如果沒有庫存 ===-->
-              <% else %>
-                <div class="quantity-box">
-                  <%= t('product-quantity') %>：<span class="quantity-none"><%= t('product-quantity-none') %></span>
-                </div>
-              <% end %>
-            </p>
+       <!-- 社群分享 -->
+       <!-- <div class="share">
+         <a href="#"><i class="fa fa-twitter"></i></a>
+         <a href="#"><i class="fa fa-facebook"></i></a>
+         <a href="#"><i class="fa fa-google"></i></a>
+         <a href="#"><i class="fa fa-pinterest"></i></a>
+         <a href="#"><i class="fa fa-wechat"></i></a>
+       </div> -->
+     </div>
 
-          </div>
-          <hr />
+     <!-- 购买按钮 -->
+     <div class="purchase">
+       <button class="btn btn-lg btn-default">
+         <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
+       </button>
+     </div>
 
-          <div class='row'>
-            <!-- 願望清單 -->
-            <div class='left-box wish'>
-              <% if current_user && current_user.is_wish_list_owner_of?(@product) %>
-                <%= link_to remove_from_wish_list_product_path(@product), method: :post do %>
-                  <i class='fa fa-check fa-fw'> </i><%= t('wish-list-remove') %>
-                <% end %>
-              <% else %>
-                <%= link_to add_to_wish_list_product_path(@product), method: :post do %>
-                  <i class='fa fa-plus fa-fw'> </i><%= t('wish-list-add') %>
-                <% end %>
-              <% end %>
-            </div>
-            <div class='right-box share'>
-              <%= social_share_button_tag(@product.name, :allow_sites => %w(facebook twitter google_plus wechat weibo), :image => @product_images.first.image.main.url , desc: @product.description, via: 'J&A SELECT - '+@product.name, 'data-twitter-title' => 'J&A SELECT - '+@product.name) %>
-            </div>
-          </div>
-          <!--=== 如果庫存數量大於零 ===-->
-          <% if @orderSum < @product.quantity && @product.quantity > 0 %>
-            <!-- 加入購物車 -->
-            <button class="btn btn-md btn-default" type="submit">
-              <%= t('btn-add-to-cart')%>
-            </button>
+     <!-- 推荐商品 * 3 -->
+     <div class="recommend">
 
-          <!--=== 如果沒有庫存 ===-->
-          <% else %>
-            <button class="btn btn-md btn-default" disabled="disabled" type="button">
-              <%= t('btn-add-to-cart-none')%>
-            </button>
-          <% end %>
-          <!-- 顯示隨機推薦商品 -->
-          <div class='suggest-box'>
-            <hr class='suggest'>
-            <%= render 'shared/suggest' %>
-          </div>
-        </div>
-        <% end %>
+       <hr class="recommend-title">
+      <h5>推荐商品<h5>
+       <div class="col-xs-12 col-sm-4 col-md-4">
+         <%= link_to '/products/7' do %>
+           <%= image_tag("https://ws1.sinaimg.cn/large/006tNbRwgy1fgercmg0e8j306004maab.jpg") %>
+         <% end %>
+       </div>
+       <div class="col-xs-12 col-sm-4 col-md-4">
+         <%= link_to '/products/13' do %>
+           <%= image_tag("https://ws3.sinaimg.cn/large/006tNc79gy1fgerjlzpzvj305704jmxq.jpg") %>
+         <% end %>
+       </div>
+       <div class="col-xs-12 col-sm-4 col-md-4">
+         <%= link_to '/products/12' do %>
+           <%= image_tag("https://ws2.sinaimg.cn/large/006tNc79gy1fgeridkcenj305c04l3yq.jpg") %>
+         <% end %>
+       </div>
+     </div>
+   </section>
+ </div>
+</div>

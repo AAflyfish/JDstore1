@@ -78,3 +78,104 @@
 
    }
    // 导航栏结束
+
+
+   .show-box {
+      /* 区块 */
+       background-color: #f8f8f8;
+       text-align: center;
+       padding: 50px 0 50px 0;
+
+
+       .short-line {
+          background: #0070DE;
+          margin: 15px auto 30px auto;
+          width: 150px;
+          height: 1.5px;
+      }
+
+      /* 图片区块 */
+     .box {
+        margin-top: 15px;
+        box-shadow: 2px 2px 5px #888;
+       width: 100%;
+      }
+      img {
+
+       height: 160px;
+       width: 160px;
+
+
+   }
+
+      /* 图片区块-鼠标滑动效果 */
+      .box:hover {
+        opacity: 0.6;
+      }
+
+      /* 文字区块 */
+      .content {
+        margin-top: 15px;
+        color: #000;
+      }
+    }
+   //  推荐商品
+
+   //product index
+
+.product-box {
+  text-align: center;
+  padding: 0 0 100px 0;
+  /* 广告图 */
+    .intro-box {
+      text-align: center;
+
+      img {
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 20px;
+      }
+    }
+
+    /* 商品类型 & 品牌选单 */
+    .menu-box {
+
+    }
+
+    /* 页面路径 & 排序  */
+    .path-sort-box {
+      text-align: left;
+      height: 20px;
+
+      .left-box {
+       float: left;
+      }
+
+      .right-box {
+        float: right;
+
+        button {
+          margin: -15px 0 -15px 0;
+          padding: 7.5px 10px 7.5px 10px;
+          border: 2px solid #666;
+          color: #333;
+        }
+
+        button:focus {
+          background-color: #fff;
+          color: #333;
+        }
+
+        ul {
+          margin-top: 15px;
+        }
+        .box:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+    
+}
+
+ //product index
+
