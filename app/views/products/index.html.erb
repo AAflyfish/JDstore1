@@ -73,7 +73,7 @@
      <section class="path-sort-box">
        <!--=== 产品页面路径 ===-->
        <div class="left-box">
-         <a href="#">JDStore</a>
+         <a href="/">Big Show</a>
        </div>
        <!--=== 选单按钮 ===-->
        <div class="right-box">
@@ -84,7 +84,7 @@
            <!-- 选单内容：排序方式 -->
            <ul class="dropdown-menu dropdown-menu-right" selection aria-labelledby="dropdownMenuDivider">
              <li><a href="#">热销度</a></li>
-             <li><a href="#">上架时间</a></li>
+             <li><%= link_to("按照发表时间排序", products_path ) %></li>
              <li><a href="#">价格排序</a></li>
 
            </ul>
@@ -107,7 +107,7 @@
            <%= product.title %> ￥ <%= product.price %>
          </div>
        <% end %>
-       
+
      </div>
    </div>
  </div>
