@@ -27,7 +27,7 @@
 }
 .banner-detail .banner-slogan {
     position: relative;
-    color: #fff;
+    color: #fff; //  定义“show出你的格调”的默认颜色，不过这里定义的字体默认颜色可以通过在welcome／index.html.erb页面修改。 “by fish”
     margin-top: 120px;
     margin-left: 30%;
     font-weight: 400;
@@ -36,14 +36,14 @@
 .banner-detail .sub-slogan {
     margin-top: 40px;
     padding-right: 40px;
-    font-size: 50px;
+    font-size: 50px;  //定义“格调”两个字体的大小
 }
-.banner-detail .sign-up-button {
-    margin-left: 30%;
+.banner-detail .sign-up-button {   //这一段定义了“懂你的好”这个按钮的位置 “by fish”
+    margin-left: 35%;
     position: absolute;
     height: 80px;
     margin-top: 30px;
-    width: 100%;
+    width: 10%;
 }
 .banner-v2 .banner-detail .btn-default {
     background: #e6b254;
@@ -73,13 +73,13 @@
 
 #service {
     padding-bottom: 50px;
-    background-color: #fff;
+    background-color: #fff; //这定义service模块的背景色，service模块就是”小图和文字部分的区域“ ，介于首页大图和bigshow区间。“by fish”
     padding-top: 20px;
 
     .module-name {
     margin-top: 45px;
     margin-bottom: 45px;
-    color: rgba(0, 0, 0, 0.5);
+    color:  #E8591F;  // 这定义的是service模块标题的字体颜色 “美好的选择show给有格调的你”  “by fish”
     text-align: center;
     font-size: 0;
 }
@@ -92,8 +92,8 @@
     text-align: center;
 }
 .service-item-img .round-image-160 {
-    background-color: white;
-    border: 1px solid #faf6ec;
+    background-color: white;  // 这个不知道什么，我尝试改了几次美变化，猜可能是小图背后的背景色，由于在小图后面，而小图又不透明，所以改了也没反应。 “by fish”
+    border: 1px solid #faf6ec; // 这定义了service模块中三个小图边框线条颜色  “by fish”
     border-radius: 80px;
     -moz-border-radius: 80px;
     -webkit-border-radius: 80px;
@@ -107,9 +107,10 @@
 //service
 
 //customer-feedback 我也不知道什么意思，抄的
+//这里我明白是那个区域，这对应首页的顾客反馈区域 “by fish”
 #customer-feedback {
     padding-bottom: 50px;
-    background-color:#eeeeee;
+    background-color:#eeeeee;  //定义顾客反馈区域的背景颜色 “by fish”
     padding-top: 20px;
 
 
@@ -120,7 +121,7 @@
 .module-name {
     margin-top: 45px;
     margin-bottom: 45px;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);  //定义顾客反馈区域标题颜色 “有格调的人说” “by fish”
     text-align: center;
     font-size: 0;
 }
@@ -133,18 +134,18 @@
     text-align: center;
 }
 .fd-avatar-box {
-    border: 4px solid #faf6ec;
+    border: 4px solid #faf6ec;  //定义顾客头像边框线条颜色  “by fish”
     border-radius: 168px;
     width: 83px;
     height: 83px;
-    background-color: #fff;
+    background-color:  #faf6ec; //定义顾客头像后面的背景颜色，确定！  “by fish”
     position: relative;
     z-index: 14;
     margin: 0 auto;
 }
 #customer-feedback .col-md-4 .quote-box-1 {
     padding: 30px 30px;
-    background-color: #FFF;
+    background-color: #faf6ec;
     color: rgba(0, 0, 0, 0.5);
     line-height: 2em;
     border: 4px solid #faf6ec;
