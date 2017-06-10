@@ -52,5 +52,29 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.default_url_options = { host: 'locahost:3000' }
-  config.action_mailer.delivery_method = :letter_opener
+  # config.action_mailer.delivery_method = :letter_opener
+
+  config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    address: "smtpcloud.sohu.com",
+    port: 25,
+    domain: "heroku.com",
+    authentication: "login",
+    enable_starttls_auto: true,
+    user_name: ENV["SEND_CLOUD_USER_NAME"],
+    password: ENV["SEND_CLOUD_USER_KEY"]
+    }
+
+    config.action_mailer.default_url_options = { :host => 'https://obscure-springs-32866.herokuapp.com/'}
+
+    config.action_mailer.delivery_method = :smtp
+    ActionMailer::Base.smtp_settings = {
+      address: "smtpcloud.sohu.com",
+      port: 25,
+      domain: "heroku.com",
+      authentication: "login",
+      enable_starttls_auto: true,
+      user_name: ENV["SEND_CLOUD_USER_NAME"],
+      password: ENV["SEND_CLOUD_USER_KEY"]
+      }
 end
