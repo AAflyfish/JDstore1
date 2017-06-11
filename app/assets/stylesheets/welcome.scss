@@ -9,13 +9,13 @@
     margin-top: 0px;
     height: 480px;
     .banner-img {
-        height: 480px;
+        // height: 480px;    //这一行代码定义图片的高度。
         position: relative;
         z-index: 1;
     }
     .banner-img img {
     width: 100%;
-    opacity: 0.7;
+    opacity: 0.95;   //这行代码定义了图片的透明度，0指的是全透明，会变成白色，看度到图片了，1指的是和原图一样。“by fish”
     height: 100%;
 }
  .banner-detail {
@@ -44,6 +44,9 @@
     height: 80px;
     margin-top: 30px;
     width: 10%;
+}
+a {
+ background-color: #F2FC99;   //定义了“懂你的好”这个框的背景se。  “by fish”
 }
 .banner-v2 .banner-detail .btn-default {
     background: #e6b254;
