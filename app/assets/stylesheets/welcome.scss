@@ -15,7 +15,7 @@
     }
     .banner-img img {
     width: 100%;
-    opacity: 0.95;   //这行代码定义了图片的透明度，0指的是全透明，会变成白色，看度到图片了，1指的是和原图一样。“by fish”
+    opacity: 0.95;   //这行代码定义了图片的不透明度“opacity”，0指的是全透明，会变成白色，看度到图片了，1指的是和原图一样。“by fish”
     height: 100%;
 }
  .banner-detail {
