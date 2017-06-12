@@ -28,6 +28,21 @@
      margin-bottom: 0; //底部 margin 不撑开距离
  }
 
+      //定义导航栏的悬浮顶部代码，开始；
+ .navbar-fixed-top{
+   top: 0px
+ }
+
+ .navbar-fixed-top, .navbar-fixed-botton{
+   position: fixed;
+   top: 0px;
+   right: 0;
+   left: 0;
+   z-index: 1030;
+ }
+      // 定义导航栏的悬浮顶部代码，结束。
+
+
  @media (min-width: 768px) {
    .navbar {
      border-radius: 0; //圆角为0
