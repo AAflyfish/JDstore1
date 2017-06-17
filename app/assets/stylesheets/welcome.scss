@@ -19,7 +19,7 @@
     height: 100%;
 }
  .banner-detail {
-    margin-top: -480px;
+    margin-top: -480px;   //定义了首页大图中，文字部分与图片顶部的高度  “by fish”
     padding-top: 0px;
     height: 460px;
     position: relative;
@@ -46,7 +46,7 @@
     width: 10%;
 }
 a {
- background-color: #F2FC99;   //定义了“懂你的好”这个框的背景se。  “by fish”
+ background-color: #F2FC99;   //定义了“懂你的好”这个框的背景色。  “by fish”
 }
 .banner-v2 .banner-detail .btn-default {
     background: #e6b254;
@@ -77,7 +77,7 @@ a {
 #service {
     padding-bottom: 50px;
     background-color: #fff; //这定义service模块的背景色，service模块就是”小图和文字部分的区域“ ，介于首页大图和bigshow区间。“by fish”
-    padding-top: 20px;
+    padding-top: 150px;      //定义了service顶部与首页大图底部的间距  “by fish”
 
     .module-name {
     margin-top: 45px;
